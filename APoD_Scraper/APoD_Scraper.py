@@ -19,7 +19,10 @@ Future improvements:
 Option to download a date range
 Option to download starting at a date and then moving forward through time
 Command line options for archive or picture of the day
-    
+
+Python and library requirements
+Tested on Python 2.7 and 3.7.4
+requests, os, re, time, random, and bs4
 """
 
 # Import necessary libraries
