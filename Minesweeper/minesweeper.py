@@ -253,7 +253,7 @@ def choose(sol_grid,known_grid):
     while True:
         
         # Ask for cell to open
-        chosen_cell = str(raw_input('Choose a square (eg. A0) or place a marker (eg. mA0).\nIf you would like a hint, type "hint" without quotes: ')).upper()
+        chosen_cell = str(input('Choose a square (eg. A0) or place a marker (eg. mA0).\nIf you would like a hint, type "hint" without quotes: ')).upper()
         print(chosen_cell)
         
         # Check for a valid square
@@ -365,9 +365,9 @@ def playGame(sol_grid,known_grid):
         print('Sorry! You hit a bomb. You lose the game!')
         
         # Offer to play again
-        playAgain = str(raw_input('Play again? (Y/N): ')).upper()
+        playAgain = str(input('Play again? (Y/N): ')).upper()
         if playAgain == 'Y':
-            N = int(raw_input("How large would you like the grid size?\n"))
+            N = int(input("How large would you like the grid size?\n"))
             # Initialize the new board
             sol_grid,known_grid = init_grid(N)
             
@@ -401,11 +401,11 @@ def playGame(sol_grid,known_grid):
         print('Congratulations! You won the game!')
         
         # Offer to play again
-        playAgain = str(raw_input('Play again? (Y/N): ')).upper()
+        playAgain = str(input('Play again? (Y/N): ')).upper()
         if playAgain == 'Y':
             
             try:
-                N = int(raw_input("How large would you like the grid size?\n"))
+                N = int(input("How large would you like the grid size?\n"))
             except ValueError:
                 print("Error: Input must be an integer")
                 
@@ -430,7 +430,7 @@ def main():
     # Loop in case of invalid entry
     while True:
         try:
-            N = int(raw_input("How large would you like the grid size? (e.g. 5)\n"))
+            N = int(input("How large would you like the grid size? (e.g. 5)\n"))
             break
         except ValueError:
             print("ERROR: Input must be an integer")
