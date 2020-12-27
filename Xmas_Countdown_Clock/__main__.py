@@ -23,6 +23,7 @@ On Dec 24, it will say "1 day until Christmas."
 
 # Import necessary libraries
 from datetime import date
+import random
 
 ############################
 # Check the day
@@ -31,8 +32,8 @@ today_date = date.today()
 month = today_date.month
 day = today_date.month
 xmas_day = 25
-print(f"Today is {today_date}")
-
+# print(f"Today is {today_date}")
+example_day = random.randint(1,25)
 
 ############################
 # Announce the day
@@ -46,15 +47,17 @@ for key in range(1,25):
     announcement_dict[key] = f'{day} day(s) until Christmas' 
 
 announcement_dict[25] = 'Merry Christmas!'
+print(announcement_dict[example_day])
 
 ############################
 # Play a random Xmas jingle
 ############################
 # xmas_jingles will be a list of strings containing the filenames
 # of random Xmas jingles.
-xmas_jingles = ['jingle_bells.mp3','silent_night.mp3','run_run_rudolph.mp3']
+xmas_jingles = ['jingle_bells.mp3','silent_night.mp3','run_run_rudolph.mp3',\
+                'oh_xmas_tree.mp3','let_it_snow.mp3','winter_wonderland.mp3']
 # Get a random jingle and then play it
 
-
+print(random.choice(xmas_jingles))
 
 
