@@ -2,6 +2,7 @@
 # Compiled source
 *.swp*
 *.pcy*
+*.pyc*
 
 # 
 # OS generated files 
